@@ -125,40 +125,9 @@ LIBRARIES		+= lib/mathlib/CMSIS
 
 export PX4_FMA_BASE	 = $(abspath $(PX4_BASE)/../FMA-Apps)/
 
-##############################
-######     FMA DEPS     ###### 
-##############################
+MODULE_SEARCH_DIRS 		+= $(PX4_FMA_BASE)
 
-MODULES 		+= $(PX4_FMA_BASE)/ext/Components
-MODULES 		+= $(PX4_FMA_BASE)/ext/ACBridgev3
 
-##############################
-######     FMA LIBS     ###### 
-##############################
-
-MODULES 		+= $(PX4_FMA_BASE)/lib
-
-##############################
-###### FMA uORB Topics  ###### 
-##############################
-
-#MODULES 		+= $(PX4_FMA_BASE)/uORBTopics
-
-##############################
-######     FMA APPS     ###### 
-##############################
-
-#MODULES 		+= $(PX4_FMA_BASE)/src/fmaD
-#MODULES 		+= $(PX4_FMA_BASE)/src/fmaFC
-MODULES 		+= $(PX4_FMA_BASE)/src/fmaLog
-MODULES 		+= $(PX4_FMA_BASE)/src/asctec_bldc
-MODULES 		+= $(PX4_FMA_BASE)/src/serial_pipe
-#MODULES 		+= $(PX4_FMA_BASE)/src/commandRadio
-MODULES 		+= $(PX4_FMA_BASE)/src/commandRadio2
-MODULES 		+= $(PX4_FMA_BASE)/src/commandRadio2Sniffer
-MODULES			+= $(PX4_FMA_BASE)/src/telemetryChannel
-MODULES 		+= $(PX4_FMA_BASE)/src/mQuad
-MODULES 		+= $(PX4_FMA_BASE)/src/powerButton
 
 #
 # Transitional support - add commands from the NuttX export archive.
