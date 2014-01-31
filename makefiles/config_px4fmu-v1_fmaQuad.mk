@@ -125,7 +125,9 @@ LIBRARIES		+= lib/mathlib/CMSIS
 
 export PX4_FMA_APP	 = $(abspath $(PX4_BASE)/../FMA-Apps)
 include $(PX4_FMA_APP)/FMAModules.mk
-
+ifneq ($(wildcard $(PX4_FMA_APP)/FMAModulesLocal.mk),)
+  include $(PX4_FMA_APP)/FMAModulesLocal.mk
+endif
 
 #
 # Transitional support - add commands from the NuttX export archive.
