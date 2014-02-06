@@ -38,7 +38,7 @@ MODULES			+= modules/sensors
 # System commands
 #
 MODULES			+= systemcmds/eeprom
-#MODULES		+= systemcmds/bl_update
+MODULES			+= systemcmds/bl_update
 MODULES			+= systemcmds/boardinfo
 MODULES			+= systemcmds/i2c
 #MODULES		+= systemcmds/mixer
